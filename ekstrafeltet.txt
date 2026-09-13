@@ -1,0 +1,52 @@
+EKSTRAFELTET ENDRINGER
+
+1 Velkomstskjerm (welcome-state)
+- Jeg har lagt til en egen velkomstskjerm som vises før spillet starter
+- På velkomstskjermen vises tasteregler (styring, pause, info-modus)
+- Spillet starter først når spilleren trykker SPACE
+- Dette gjør at spillet ikke “starter av seg selv” før man er klar
+
+2 Pause-funksjon (paused-state) + pauseskjerm
+- Jeg har lagt til mulighet for å pause spillet ved å trykke 'p'
+- Når spillet er pauset stopper slangen å bevege seg, og det vises en tydelig PAUSED-melding på skjermen
+- Trykker man 'p' igjen fortsetter spillet
+
+3 Game Over-skjerm og restart med SPACE
+- Når slangen krasjer settes state til 'gameover'
+- Det vises en tydelig GAME OVER-boks på skjermen
+- Spilleren kan starte på nytt ved å trykke SPACE (kan også bruke 'r' som alternativ, men står SPACE i teksten)
+
+4 Penere design / farger (snake_view.py)
+- Jeg har forbedret fargene slik at spillet blir mer visuelt og lettere å lese:
+  - Tomme ruter: mørk grønn bakgrunn (#2f4f2f)
+  - Eple: rødt (#ff4d4d)
+  - Slangekropp: lys grønn (#66cc66)
+  - Slangehode: egen farge (#00ff99)
+- Jeg bruker brettverdiene til å bestemme fargene:
+  - 0 = tom rute
+  - -1 = eple
+  - max_value (største positive verdi på brettet) = hodet
+  - ellers (positive verdier) = kropp
+
+5 Info-modus (infoskjerm)
+- Jeg har en info-modus som kan skrus av/på med 'i'
+- Når info-modus er på vises:
+  A Inne i hver celle (på brettet):
+     - Koordinatene (rad, kolonne)
+     - Verdien i cellen
+        0 betyr tom
+       -1 betyr eple
+       positive tall betyr slange (tallet representerer “kroppens alder” og hodet er da høyeste tallet)
+  B Ekstra tekst oppe i vinduet:
+     direction (retning)
+     head_pos (hodeposisjon)
+     state (tilstand active/paused/gameover)
+- Dette gjør det mye enklere å feilsøke og forstå hvordan brettverdiene endrer seg
+
+6 Lengde-counter (score/lengde-visning)
+- Jeg viser en lengde-counter på skjermen under spillet:
+   "Lengde: X"
+- X er app.snake_size, og øker hver gang slangen spiser et eple
+
+Oppsummert:
+Jeg har laget velkomstskjerm, pauseskjerm, restart-funksjon, lengdevisning og forbedret designet med tydelige farger (med eget hode), i tillegg til en nyttig info-modus som viser koordinater og brettverdier
