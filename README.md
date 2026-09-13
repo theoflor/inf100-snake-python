@@ -11,6 +11,7 @@ Teknologi: Python, INF100 Graphics
 
 Kjøre prosjektet
 Prosjektet krever Python og INF100 Graphics-biblioteket.
+
 Installer avhengigheter hvis prosjektet har en requirements.txt-fil:
 pip install -r requirements.txt
 
@@ -18,12 +19,12 @@ Start spillet:
 snake_main.py
 
 Gjennom prosjektet fikk jeg øvd på:
-å håndtere tastaturinput
-å tegne enkel grafikk
-å bruke en spill-løkke
-å oppdatere posisjon og retning
-å sjekke kollisjon
-å holde styr på poeng
+å håndtere tastaturinput,
+å tegne enkel grafikk,
+å bruke en spill-løkke,
+å oppdatere posisjon og retning,
+å sjekke kollisjon,
+å holde styr på poeng,
 å strukturere et lite Python-prosjekt
 
 
