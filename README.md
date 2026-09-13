@@ -17,7 +17,6 @@ pip install -r requirements.txt
 Start spillet:
 snake_main.py
 
-Hva jeg lærte
 Gjennom prosjektet fikk jeg øvd på:
 å håndtere tastaturinput
 å tegne enkel grafikk
